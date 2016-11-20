@@ -1,5 +1,7 @@
 'use strict';
 
+const process = require('./process');
+
 const globalHooks = require('../../../hooks');
 const hooks = require('feathers-hooks');
 
@@ -8,7 +10,7 @@ exports.before = {
   all: [],
   find: [],
   get: [],
-  create: [],
+  create: [process()],
   update: [],
   patch: [],
   remove: []
