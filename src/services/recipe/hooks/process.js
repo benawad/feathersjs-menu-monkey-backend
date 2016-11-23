@@ -7,10 +7,42 @@
 
 const defaults = {};
 
+const Ajv = require('ajv');
+const ajv = new Ajv(); 
+const schema = {
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "imageURL": {
+      "type": "string"
+    },
+    "ingredients": {
+      "type": "object",
+      "properties": {}
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "imageURL",
+    "ingredients",
+    "description"
+  ]
+}
+const validate = ajv.compile(schema);
+
 module.exports = function(options) {
   options = Object.assign({}, defaults, options);
 
   return function(hook) {
+    const valid = validate(hook.data);
+    if (!valid) {
+      throw new Error("Invalid json");
+    }
     hook.data = Object.assign({}, hook.data, {
       createdAt: new Date().getTime(),
     });
