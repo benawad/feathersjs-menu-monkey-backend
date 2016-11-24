@@ -19,8 +19,10 @@ const schema = {
       "type": "string"
     },
     "ingredients": {
-      "type": "object",
-      "properties": {}
+     "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "description": {
       "type": "string"
@@ -45,6 +47,7 @@ module.exports = function(options) {
     }
     hook.data = Object.assign({}, hook.data, {
       createdAt: new Date().getTime(),
+      ownerId: hook.params.user._id,
     });
   };
 };
