@@ -13,3 +13,7 @@ Backend for a recipe box website
 `npm start`
 
 Then run the [frontend](https://github.com/benawad/react-menu-monkey-client/tree/master).
+
+# Learn how it was made
+
+Check out the [YouTube tutorial](https://www.youtube.com/watch?v=nR0kxhbI09I).
