@@ -23,6 +23,6 @@ describe('recipe process hook', function() {
     };
 
     process()(mockHook);
-    assert.ok(mockHook.process);
+    assert.ok(mockHook.data);
   });
 });
