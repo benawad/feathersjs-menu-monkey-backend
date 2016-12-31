@@ -8,13 +8,21 @@ describe('recipe process hook', function() {
     const mockHook = {
       type: 'before',
       app: {},
-      params: {},
+      params: {
+        user: {
+          _id: '12983791'
+        }
+      },
       result: {},
-      data: {}
+      data: {
+        name: 'Tikka Masala',
+        imageURL: 'http://...',
+        ingredients: ['Tomatoes', 'Garam Masala'],
+        description: 'Toss everything in a pot and cook!'
+      }
     };
 
     process()(mockHook);
-
     assert.ok(mockHook.process);
   });
 });
