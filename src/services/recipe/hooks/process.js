@@ -33,7 +33,8 @@ const schema = {
     'imageURL',
     'ingredients',
     'description'
-  ]
+  ],
+  'additionalProperties': false
 };
 const validate = ajv.compile(schema);
 
