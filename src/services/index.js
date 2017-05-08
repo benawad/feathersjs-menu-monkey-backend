@@ -1,13 +1,11 @@
 'use strict';
-const recipe = require('./recipe');
-const authentication = require('./authentication');
-const user = require('./user');
 
-module.exports = function() {
-  const app = this;
+const users = require('./users/users.service.js');
 
+const recipes = require('./recipes/recipes.service.js');
 
-  app.configure(authentication);
-  app.configure(user);
-  app.configure(recipe);
+module.exports = function () {
+  const app = this; // eslint-disable-line no-unused-vars
+  app.configure(users);
+  app.configure(recipes);
 };

@@ -1,12 +1,4 @@
 {
-  "host": "menu_monkey_backend-app.feathersjs.com",
-  "port": 80,
-  "nedb": "NEDB_BASE_PATH",
-  "public": "../public/",
-  "auth": {
-    "token": {
-      "secret": "FEATHERS_AUTH_SECRET"
-    },
-    "local": {}
-  }
+  "host": "upgraded-menu-monkey-app.feathersjs.com",
+  "port": "PORT"
 }

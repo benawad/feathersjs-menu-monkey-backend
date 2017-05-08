@@ -1,46 +1,54 @@
 {
-  "name": "menu_monkey_backend",
+  "name": "upgraded-menu-monkey",
   "description": "",
   "version": "0.0.0",
   "homepage": "",
-  "main": "src/",
+  "main": "src",
   "keywords": [
     "feathers"
   ],
-  "license": "MIT",
-  "repository": {},
-  "author": {},
+  "author": {
+    "name": "ben awad",
+    "email": "benawad97@gmail.com"
+  },
   "contributors": [],
   "bugs": {},
+  "directories": {
+    "lib": "src"
+  },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 6.0.0",
+    "yarn": ">= 0.18.0"
   },
   "scripts": {
-    "test": "npm run jshint && npm run mocha",
-    "jshint": "jshint src/. test/. --config",
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "node src/",
     "mocha": "mocha test/ --recursive"
   },
   "dependencies": {
-    "ajv": "^4.9.0",
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.17.1",
     "compression": "^1.6.2",
-    "cors": "^2.8.1",
-    "feathers": "^2.0.2",
-    "feathers-authentication": "^0.7.12",
-    "feathers-configuration": "^0.3.3",
-    "feathers-errors": "^2.5.0",
-    "feathers-hooks": "^1.6.1",
-    "feathers-nedb": "^2.6.0",
-    "feathers-rest": "^1.5.2",
-    "nedb": "^1.8.0",
-    "passport": "^0.3.2",
-    "serve-favicon": "^2.3.2",
-    "winston": "^2.3.0"
-  },
-  "devDependencies": {
-    "jshint": "^2.9.4",
-    "mocha": "^3.1.2",
-    "request": "^2.79.0"
+    "cors": "^2.8.3",
+    "eslint": "^3.19.0",
+    "feathers": "^2.1.1",
+    "feathers-authentication": "^1.2.2",
+    "feathers-authentication-hooks": "^0.1.2",
+    "feathers-authentication-jwt": "^0.3.1",
+    "feathers-authentication-local": "^0.3.4",
+    "feathers-configuration": "^0.4.1",
+    "feathers-errors": "^2.7.1",
+    "feathers-hooks": "^2.0.1",
+    "feathers-hooks-common": "^3.2.0",
+    "feathers-mongodb": "^2.8.0",
+    "feathers-rest": "^1.7.2",
+    "feathers-socketio": "^1.6.0",
+    "helmet": "^3.6.0",
+    "mocha": "^3.3.0",
+    "mongodb": "^2.2.26",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "serve-favicon": "^2.4.2",
+    "winston": "^2.3.1"
   }
 }

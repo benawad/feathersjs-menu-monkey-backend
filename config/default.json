@@ -1,12 +1,35 @@
 {
   "host": "localhost",
   "port": 3030,
-  "nedb": "../data/",
   "public": "../public/",
-  "auth": {
-    "token": {
-      "secret": "NVCZKiiQ8Rkht0UGWtTt1aRIaKVkj8U/3g+67LaVM7VcBfHg94SnaxT5bZOuIHjCwc6Bxh+y9yajm6ih1hIbbg=="
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "secret": "0f8a0c9500cc46e1f1218a5f57325bd07ac64ec1fd8a3b9ae56b37350c7433f76596cbcc870d6f697be5263854c992853b3ef14526159646efd77045b573a688ef8fd0c3cb287e17c8e7f0f46f13d74cddadcf80fdb7eff26b424acb6ce7fb88da77cb82721e0ebafff63fb62b47f0e99246392b4e8dcfa4156f7456a3d8ac36911788ef06cd14cf76204bf02317342e54849e52f85b65de543b5d219d0ffb4e5cc9e3ac68780822c63c905b3208bbe75a963d40342260eb808ca3ace765e9506eed08d90a176f867d672f6a4e3565c1f93f5e005ef56b24c6b845080921f547bd31f53315ae07e4dba7462b7ba7c4d2fe1116627bdfcc0c4148ea71ac7d8f02",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
     },
-    "local": {}
-  }
+    "local": {
+      "entity": "user",
+      "service": "users",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/upgraded_menu_monkey"
 }
