@@ -4,6 +4,8 @@ Backend for a recipe box website
 
 # How to run it
 
+Install [mongodb](https://www.mongodb.com/) then create a database called `upgraded_menu_monkey`
+
 `git clone https://github.com/benawad/feathersjs-menu-monkey-backend.git`
 
 `cd feathersjs-menu-monkey-backend`
