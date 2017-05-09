@@ -45,6 +45,7 @@ app.configure(authentication);
 
 // Set up our services (see `services/index.js`)
 app.configure(services);
+app.use('*', feathers.static(app.get('public')));
 // Configure middleware (see `middleware/index.js`) - always has to be last
 app.configure(middleware);
 app.hooks(appHooks);
